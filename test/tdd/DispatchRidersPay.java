@@ -1,6 +1,6 @@
 package tdd;
 
-import ChibuzorAssignment.Money;
+import ChibuzorAssignment.DispatchRider;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
