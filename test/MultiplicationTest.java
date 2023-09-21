@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class MultiplicationTest {
     @Test
     public void testMultiplication() {
-        int multiply = Multiplication.multiplication(2,-0);
+        int multiply = Multiplication.multiplication(0,-1);
         assertEquals(0, multiply );
     }
 }
