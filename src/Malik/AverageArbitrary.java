@@ -9,14 +9,15 @@ public class AverageArbitrary {
         int number = input.nextInt();
         int count = 0;
         int sum = 0;
-        int average = 0;
+        double average;
         while (number != -1) {
             sum = number + sum;
             count += 1;
             System.out.println("Enter the number: ");
+            number = input.nextInt();
         }
-        average = sum / count;
-        System.out.printf("The sum of the number: ", sum);
-        System.out.printf("The average of the number is:", average);
+        average =(double) sum / count;
+        System.out.printf("\nThe sum of the number:%d", sum);
+        System.out.printf("\nThe average of the number is:%f", average);
     }
 }

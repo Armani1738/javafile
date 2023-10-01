@@ -9,7 +9,7 @@ public class ClassFactorTask {
         System.out.print("Enter number: ");
         int number = inputs.nextInt();
         int factor = number / 2;
-        if (factor == 2 && number <= 0 && number != 0) {
+        if (factor % 2 == 0) {
             System.out.println("number entered is a prime number");
         }else
             System.out.println("number entered is not a prime number");

@@ -82,6 +82,9 @@ public class NokiaPhone {
                             case 2:
                                 System.out.println("Memory status");
                                 break;
+                            case 3:
+                                int phoneBook1 = phoneBook;
+                                break;
                         }
                         break;
                     case 9:

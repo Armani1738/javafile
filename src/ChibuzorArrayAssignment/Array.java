@@ -1,4 +1,4 @@
-package ChibuzorAssignment;
+package ChibuzorArrayAssignment;
 
 import java.util.Scanner;
 

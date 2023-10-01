@@ -7,7 +7,7 @@ public class SumOfEvenNumbersInScore4 {
         Scanner scanner = new Scanner(System.in);
         int count;
         int sum = 0;
-        for (count = 0; count <= 10 ; count++) {
+        for (count = 1; count <= 10 ; count++) {
             System.out.println("Enter the score: ");
             int number = scanner.nextInt();
             if (number % 2 ==0){

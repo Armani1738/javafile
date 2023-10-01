@@ -5,8 +5,7 @@ public class PrimeNumbers {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your number:");
         int number = input.nextInt();
-        int prime = number / number % 2;
-                    prime = 0;
+        int prime =0;
         if(prime != 0 && number % 2 == 0){
             System.out.print("Not a prime");
         } else {

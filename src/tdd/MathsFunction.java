@@ -9,7 +9,6 @@ public class MathsFunction {
             return false;
         }
     }
-
     public static boolean primeNumber(int number) {
         boolean prime = true;
         boolean notPrime = false;

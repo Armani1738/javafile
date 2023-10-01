@@ -20,7 +20,7 @@ public class CarDriver {
         myCar.changeTyre(4);
         int theTyre = myCar.collectTyre();
 
-        System.out.printf("\nThe name of my car is %s",theCarName);
+        System.out.printf("The name of my car is %s",theCarName);
         System.out.printf("\nThe color of my car is %s",theColor);
         System.out.printf("\nThe no of my car tyre is %d",theTyre);
 

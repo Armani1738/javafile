@@ -7,7 +7,7 @@ public class Number {
         int number = input.nextInt();
 
         int remainder = number % 2;
-        if (remainder == 0) {
+        if (remainder % 2== 0) {
             System.out.printf("number is whole %d", remainder);
         } else if (remainder != 0) {
             System.out.printf("number is odd %d", number);

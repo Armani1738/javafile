@@ -51,5 +51,6 @@ public class Bike {
             this.acceleration = acceleration - 4;
 
         }
+
     }
 }
