@@ -1,5 +1,6 @@
 package ChibuzorArrayAssignment;
 
+import java.io.OptionalDataException;
 import java.util.Arrays;
 
 public class ArrayFunctions {
@@ -32,14 +33,8 @@ public class ArrayFunctions {
         for (int count = 0; count < integer.length; count++) {
             if (count == number) return occur;
         }
-
             return occur;
     }
-
-//        for ({number ; integer}){
-//            if (number == integer)
-//                return new boolean[]{true};
-//        }else
     public static int[] odd(int[] Number) {
         int[] odd = new int[Number.length / 2];
         int oddNumber = 0;
@@ -64,8 +59,51 @@ public class ArrayFunctions {
         }
         return even;
     }
+    public static int total(int[] number){
+        int total = 0;
+        for (int count = 0; count <= number.length; count++) {
+                total+=count;
+        }
+        return total;
+    }
+    public static boolean Palindrome(String input) {
+        int firstSide = 0, secondSide = input.length()-1;
+        while(firstSide < secondSide) {
+            if(input.charAt(firstSide) != input.charAt(secondSide)) {
+                return false;
+            }
+            firstSide++;
+            secondSide--;
+        }
+        return true;
+    }
+    public static int forLoop(int[] number){
+        int total = 0;
+        for (int count = 0; count <= number.length; count++) {
+            total+=count;
+
+        }
+        return total;
+    }
+    public static int whileLoop(int[] number){
+        int count = 0;
+        int sum = 0;
+        while (count <= number.length) {
+            sum +=count;
+            count++;
+        }
+        return sum;
+    }
+    public static int doWhileLoop(int[] number) {
+        int count = 0;
+        int sum = 0;
+        do {
+            sum +=count;
+            count++;
+        } while (count <= number.length);
+            return sum;
+        }
+    }
 
 
-
-}
 

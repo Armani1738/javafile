@@ -48,4 +48,40 @@ public class ArrayFunctionsTest {
         int[] value = ArrayFunctions.even(number);
         assertArrayEquals(result, value);
     }
+    @Test
+    void testArrayTotal(){
+        int[] number = {1,2,3,4,5,6,7,8,9,10};
+        int total = 55;
+        int result = ArrayFunctions.total(number);
+        assertEquals(result, total);
+    }
+    @Test
+    void testArrayPalindrome(){
+        String input = "omo";
+        String answer = null;
+        boolean result = ArrayFunctions.Palindrome(input);
+        assertTrue(result, answer);
+
+    }
+    @Test
+    void testForloop(){
+        int[] number = {1,2,3,4,5,6,7,8,9,10};
+        int total = 55;
+        int result = ArrayFunctions.forLoop(number);
+        assertEquals(result, total);
+    }
+    @Test
+    void testwhileLoop(){
+        int[] number = {1,2,3,4,5,6,7,8,9,10};
+        int total = 55;
+        int result = ArrayFunctions.whileLoop(number);
+        assertEquals(result, total);
+    }
+    @Test
+    void testdoWhileLoop(){
+        int[] number = {1,2,3,4,5,6,7,8,9,10};
+        int total = 55;
+        int result = ArrayFunctions.doWhileLoop(number);
+        assertEquals(result, total);
+    }
 }
