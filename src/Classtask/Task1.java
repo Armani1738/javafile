@@ -7,7 +7,7 @@ public class Task1 {
         System.out.println("Enter the score: ");
         int number = input.nextInt();
        int sum = 0;
-        int number1 = 0;
+        int number1;
         for (number1 = 0; number1 < 10; number1++) {
             sum += number;
            if (number >= 0 && number <= 10) {

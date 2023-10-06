@@ -7,12 +7,14 @@ public class Task2 {
         Scanner input = new Scanner(System.in);
         int average = 0;
         int count = 1;
+        int number = 0;
         while (count <= 10) {
-            System.out.print("Enter the score: ");
-            int number = input.nextInt();
-            count++;
             average = number / count;
+            count++;
+            System.out.print("Enter the score: ");
+            number = input.nextInt();
         }
+        
         System.out.print("The average score is %" + average);
     }
 }

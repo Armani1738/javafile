@@ -8,8 +8,8 @@ public class ArrayFunctions {
         int[] integer = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         System.out.println(Arrays.toString(odd(integer)));
     }
+
     public static int largest(int[] score) {
-//        int[] figure = {2,4,5,9,3};
         int largest = 0;
         for (int numbers = 1; numbers < score.length; numbers++) {
             if (score[numbers] > largest) {
@@ -18,6 +18,7 @@ public class ArrayFunctions {
         }
         return largest;
     }
+
     public static int[] reverse(int[] array) {
         int maxNumber = array.length - 1;
         int number = 0;
@@ -77,14 +78,15 @@ public class ArrayFunctions {
         }
         return true;
     }
+
     public static int forLoop(int[] number){
         int total = 0;
         for (int count = 0; count <= number.length; count++) {
             total+=count;
-
         }
         return total;
     }
+
     public static int whileLoop(int[] number){
         int count = 0;
         int sum = 0;

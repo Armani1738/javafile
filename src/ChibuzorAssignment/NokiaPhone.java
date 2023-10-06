@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class NokiaPhone {
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
         System.out.println("Options");
         System.out.println("""
@@ -256,7 +257,7 @@ public class NokiaPhone {
                         5-> Message alert tone
                         6-> Keypad tones
                         7-> Warning and game tones
-                        8-> Vibraing alert
+                        8-> Vibrating alert
                         9-> Screen saver
                                                      """);
                 System.out.println("kindly press options");
