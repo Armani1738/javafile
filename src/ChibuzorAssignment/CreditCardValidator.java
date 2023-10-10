@@ -1,9 +1,16 @@
 package ChibuzorAssignment;
 
 import java.util.Arrays;
+import java.util.Scanner;
+
 public class CreditCardValidator {
     public static void main(String[] args) {
-        //String[] cardLength = new String[16];
+        Scanner input = new Scanner(System.in);
+        System.out.println("Hello! Kindly Enter Card Detail to verify: ");
+        String cardNumber = input.nextLine();
+        System.out.println("*******************************************");
+        System.out.println("** The card type is: ");
+        System.out.println("** The Credit card digit length: "+ cardNumber);
         cardNumber(new String[]{"4", "5", "6", "7", "8", "9", "10", "12", "13", "18", "19","20","21","22"});
     }
     public static String cardNumber(String [] array) {
@@ -41,7 +48,16 @@ public class CreditCardValidator {
             }
         }
         sum = sumOfEvenNumbers + sumOfOddNumbers;
+        if (sum % 10 == 0)
+            System.out.println("** credit card validity status: valid: "+ sum);
+        else
+            System.out.println("** credit card validity status: invalid" + sum);
         return String.valueOf(sum);
     }
-
+//    public static String CardType(String cardNumber) {
+//        int[] cardCheck = new int[cardNumber.length()];
+//        for (int index = 0; index < cardCheck.length; index++) {
+//            cardCheck[index] = Integer.parseInt(cardNumber.substring(index,);
+//        }
+//    }
 }
