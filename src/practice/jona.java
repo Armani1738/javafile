@@ -3,7 +3,7 @@ package practice;
 public class jona {
     int[] extract;
 
-}
+
     public int[] extract(int[][] dataset, int row, int startPosition, int endPosition) {
         int[] rowData = dataset[row - 1];
         int[] extractedData = new int[(endPosition - startPosition) +1];
