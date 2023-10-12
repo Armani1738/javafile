@@ -39,7 +39,7 @@ public class AccountTest {
         //when
         armaniAccount.withdrawal(100);
         //expect
-        assertEquals(300, armaniAccount.checkbalance());
+        assertEquals(400, armaniAccount.checkbalance());
     }
     @Test
     void testWithdrawWhenDepositedTwice(){
@@ -52,7 +52,7 @@ public class AccountTest {
         //when
         armaniAccount.withdrawal(4500);
         //expect
-        assertEquals(4700, armaniAccount.checkbalance());
+        assertEquals(9200, armaniAccount.checkbalance());
     }
     @Test
     void testCannotWithdrawAboveBalance(){

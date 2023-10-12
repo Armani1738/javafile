@@ -72,16 +72,6 @@ public class Tictoe {
                                 + turn + " in:");
                 return null;
             }
-
-            // To print out the board.
-	/* |---|---|---|
-	| 1 | 2 | 3 |
-	|-----------|
-	| 4 | 5 | 6 |
-	|-----------|
-	| 7 | 8 | 9 |
-	|---|---|---|*/
-
             static void printBoard() {
                 System.out.println("|---|---|---|");
                 System.out.println("| " + board[0] + " | "

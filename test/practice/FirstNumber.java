@@ -8,7 +8,7 @@ public class FirstNumber {
         int firstNumber;
         int secondNumber;
         int thirdNumber;
-        int total =0 ;
+        int total = 0 ;
         firstNumber = number % 10;
         int reminder = number / 10;
         secondNumber = reminder % 10;

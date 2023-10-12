@@ -1,6 +1,6 @@
 package ChibuzorAssignment;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class CreditCardValidator {
@@ -8,13 +8,15 @@ public class CreditCardValidator {
         Scanner input = new Scanner(System.in);
         System.out.println("Hello! Kindly Enter Card Detail to verify: ");
         String cardNumber = input.nextLine();
+        String [] cardNum = {cardNumber};
         System.out.println("*******************************************");
-        System.out.println("** The card type is: ");
-        System.out.println("** The Credit card digit length: "+ cardNumber);
-        cardNumber(new String[]{"4", "5", "6", "7", "8", "9", "10", "12", "13", "18", "19","20","21","22"});
+        System.out.println("** The card type is: "+ cardType(cardNumber));
+        System.out.println("** The Credit card digit length: "+ cardNumber.length());
+        System.out.println("** The Credit card Number: "+ cardNumber);
+        calculateValidity(cardNum);
+        System.out.println("*******************************************");
     }
     public static String cardNumber(String [] array) {
-        //System.out.println(Arrays.toString(array));
         String response = "";
             if (array.length < 13){
                 response = "Invalid Card Length";
@@ -26,7 +28,7 @@ public class CreditCardValidator {
             }
         return response;
     }
-    public static String calculateValiditity(String[] cardNum) {
+    public static String calculateValidity(String[] cardNum) {
         int temp;
         int sumOfEvenNumbers = 0;
         int sumOfOddNumbers = 0;
@@ -49,15 +51,22 @@ public class CreditCardValidator {
         }
         sum = sumOfEvenNumbers + sumOfOddNumbers;
         if (sum % 10 == 0)
-            System.out.println("** credit card validity status: valid: "+ sum);
+            System.out.println("** credit card validity status: Valid");
         else
-            System.out.println("** credit card validity status: invalid" + sum);
+            System.out.println("** credit card validity status: Invalid");
         return String.valueOf(sum);
     }
-//    public static String CardType(String cardNumber) {
-//        int[] cardCheck = new int[cardNumber.length()];
-//        for (int index = 0; index < cardCheck.length; index++) {
-//            cardCheck[index] = Integer.parseInt(cardNumber.substring(index,);
-//        }
-//    }
-}
+    public static String cardType(String cardNumber){
+        int[] cardCheck = new int[cardNumber.length()];
+        for (int count = 0; count < cardCheck.length; count++) {
+            if (cardCheck.length >= 13 && cardCheck.length <= 16)
+                cardCheck[count] = Integer.parseInt(cardNumber.substring(count, count + 1));
+            if (cardCheck[0] == 4) return "Visa Card";
+            if (cardCheck[0] == 5) return "MasterCard";
+            if (cardCheck[0] == 3) return "American Express Card";
+            if (cardCheck[0] == 6) return "Discovery Card";
+        }
+        return "Invalid card";
+
+        }
+    }
