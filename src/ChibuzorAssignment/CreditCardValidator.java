@@ -66,6 +66,5 @@ public class CreditCardValidator {
             if (cardCheck[0] == 6) return "Discovery Card";
         }
         return "Invalid card";
-
         }
     }

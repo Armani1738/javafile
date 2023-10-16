@@ -9,6 +9,7 @@ public class ArrayFunctions {
         System.out.println(Arrays.toString(odd(integer)));
     }
 
+
     public static int largest(int[] score) {
         int largest = 0;
         for (int numbers = 1; numbers < score.length; numbers++) {

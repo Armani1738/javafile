@@ -1,4 +1,4 @@
-package practice;
+package JonathanTask;
 
 public class jona {
     int[] extract;

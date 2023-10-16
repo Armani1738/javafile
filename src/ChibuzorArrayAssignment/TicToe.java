@@ -1,5 +1,5 @@
 package ChibuzorArrayAssignment;
-public class ArrayAssignment {
+public class TicToe {
     public static void main(String[] args) {
         int index;
         int count;

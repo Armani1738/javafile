@@ -1,8 +1,8 @@
-package practice;
+package ChibuzorAssignment;
 
 import java.util.Scanner;
 
-import static practice.Guessgame.Guess.guessingNumberGame;
+import static practice.Guessgame.GuessGame.guessingNumberGame;
 
 public class Nokia3310 {
     Scanner scanner = new Scanner(System.in);

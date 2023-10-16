@@ -11,7 +11,6 @@ public class BankTest {
         Bank armani = new Bank();
 //        when an account exist
         assertNotNull(armani);
-
     }
 
     @Test

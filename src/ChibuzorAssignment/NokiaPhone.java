@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class NokiaPhone {
     public static void main(String[] args) {
-
         Scanner input = new Scanner(System.in);
         System.out.println("Options");
         System.out.println("""
@@ -24,7 +23,7 @@ public class NokiaPhone {
                 10-> Reminders
                 11-> Clock
                 12-> Profiles
-                13-> SIM services                
+                13-> SIM services         
                 """);
         System.out.println("kindly select options: ");
         int phoneBook = input.nextInt();
@@ -46,54 +45,31 @@ public class NokiaPhone {
                 System.out.print("kindly select options: ");
                 int phonebook = input.nextInt();
                 switch (phonebook) {
-                    case 1:
-                        System.out.println("search");
-                        break;
-                    case 2:
-                        System.out.println("Service Nos");
-                        break;
-                    case 3:
-                        System.out.println("Add Name");
-                        break;
-                    case 4:
-                        System.out.println("Erase");
-                        break;
-                    case 5:
-                        System.out.println("Edit");
-                        break;
-                    case 6:
-                        System.out.println("Assign tone");
-                        break;
-                    case 7:
-                        System.out.println("Send B'card");
-                        break;
-                    case 8:
+                    case 1 -> System.out.println("search");
+                    case 2 -> System.out.println("Service Nos");
+                    case 3 -> System.out.println("Add Name");
+                    case 4 -> System.out.println("Erase");
+                    case 5 -> System.out.println("Edit");
+                    case 6 -> System.out.println("Assign tone");
+                    case 7 -> System.out.println("Send B'card");
+                    case 8 -> {
                         System.out.println("Options");
                         System.out.println("""
                                 1-> Type of view
                                 2-> Memory status
                                 """);
                         System.out.print("kindly select options: ");
-
                         int options = input.nextInt();
                         switch (options) {
-                            case 1:
-                                System.out.println("Type of view");
-                                break;
-                            case 2:
-                                System.out.println("Memory status");
-                                break;
-                            case 3:
+                            case 1 -> System.out.println("Type of view");
+                            case 2 -> System.out.println("Memory status");
+                            case 3 -> {
                                 int phoneBook1 = phoneBook;
-                                break;
+                            }
                         }
-                        break;
-                    case 9:
-                        System.out.println("Speed dials");
-                        break;
-                    case 10:
-                        System.out.println("Voice tags");
-                        break;
+                    }
+                    case 9 -> System.out.println("Speed dials");
+                    case 10 -> System.out.println("Voice tags");
                 }
             case 2:
                 System.out.println("Message");
@@ -112,25 +88,13 @@ public class NokiaPhone {
                 System.out.print("kindly select options: ");
                 int message = input.nextInt();
                 switch (message) {
-                    case 1:
-                        System.out.println("Write message");
-                        break;
-                    case 2:
-                        System.out.println("Inbox message");
-                        break;
-                    case 3:
-                        System.out.println("Outbox message");
-                        break;
-                    case 4:
-                        System.out.println("Picture message");
-                        break;
-                    case 5:
-                        System.out.println("Templates");
-                        break;
-                    case 6:
-                        System.out.println("Smiley");
-                        break;
-                    case 7:
+                    case 1 -> System.out.println("Write message");
+                    case 2 -> System.out.println("Inbox message");
+                    case 3 -> System.out.println("Outbox message");
+                    case 4 -> System.out.println("Picture message");
+                    case 5 -> System.out.println("Templates");
+                    case 6 -> System.out.println("Smiley");
+                    case 7 -> {
                         System.out.println("Message settings");
                         System.out.println("""
                                 1-> Set
@@ -138,15 +102,15 @@ public class NokiaPhone {
                                 """);
                         int option = input.nextInt();
                         switch (option) {
-                            case 1:
+                            case 1 -> {
                                 System.out.println("Set");
                                 System.out.println("""
                                         1-> Message centre number
                                         2-> Message sent as
                                         3-> Message validity
                                                """);
-                                break;
-                            case 2:
+                            }
+                            case 2 -> {
                                 System.out.println("Common");
                                 System.out.println("""
                                         1-> Delivery reports
@@ -156,28 +120,16 @@ public class NokiaPhone {
                                 System.out.println("Enter the input: ");
                                 int common = input.nextInt();
                                 switch (common) {
-                                    case 1:
-                                        System.out.println("Delivery report");
-                                        break;
-                                    case 2:
-                                        System.out.println("Reply via same centre");
-                                        break;
-                                    case 3:
-                                        System.out.println("Character support");
-                                        break;
+                                    case 1 -> System.out.println("Delivery report");
+                                    case 2 -> System.out.println("Reply via same centre");
+                                    case 3 -> System.out.println("Character support");
                                 }
-                                break;
+                            }
                         }
-                        break;
-                    case 8:
-                        System.out.println("Info services");
-                        break;
-                    case 9:
-                        System.out.println("Voice mailbox number");
-                        break;
-                    case 10:
-                        System.out.println("Services");
-                        break;
+                    }
+                    case 8 -> System.out.println("Info services");
+                    case 9 -> System.out.println("Voice mailbox number");
+                    case 10 -> System.out.println("Services");
                 }
                 break;
 
@@ -263,33 +215,15 @@ public class NokiaPhone {
                 System.out.println("kindly press options");
                 int ringTone = input.nextInt();
                 switch (ringTone) {
-                    case 1:
-                        System.out.println("Ringing tone");
-                        break;
-                    case 2:
-                        System.out.println("Ringing volume");
-                        break;
-                    case 3:
-                        System.out.println("Incoming call alert");
-                        break;
-                    case 4:
-                        System.out.println("Composer");
-                        break;
-                    case 5:
-                        System.out.println("Message alert tone");
-                        break;
-                    case 6:
-                        System.out.println("Keypad tones");
-                        break;
-                    case 7:
-                        System.out.println("Warning and game tones");
-                        break;
-                    case 8:
-                        System.out.println("Vibrating alert");
-                        break;
-                    case 9:
-                        System.out.println("Screen saver");
-                        break;
+                    case 1 -> System.out.println("Ringing tone");
+                    case 2 -> System.out.println("Ringing volume");
+                    case 3 -> System.out.println("Incoming call alert");
+                    case 4 -> System.out.println("Composer");
+                    case 5 -> System.out.println("Message alert tone");
+                    case 6 -> System.out.println("Keypad tones");
+                    case 7 -> System.out.println("Warning and game tones");
+                    case 8 -> System.out.println("Vibrating alert");
+                    case 9 -> System.out.println("Screen saver");
                 }
                 break;
             case 6:
@@ -300,12 +234,12 @@ public class NokiaPhone {
                         3-> Display settings
                         4-> Network settings
                         5-> Security settings
-                        6-> Restore factory settings            
+                        6-> Restore factory setting         
                                 """);
                 System.out.println("Kindly select options:");
                 int callSettings = input.nextInt();
                 switch (callSettings) {
-                    case 1:
+                    case 1 -> {
                         System.out.println(callSettings);
                         System.out.println("""
                                 1-> Automatic redial
@@ -316,22 +250,12 @@ public class NokiaPhone {
                                 6-> Automatic answer
                                    """);
                         System.out.println("Kindly select option:");
-                        break;
-                    case 2:
-                        System.out.println("Phone settings");
-                        break;
-                    case 3:
-                        System.out.println("Display settings");
-                        break;
-                    case 4:
-                        System.out.println("Network settings");
-                        break;
-                    case 5:
-                        System.out.println("Security settings");
-                        break;
-                    case 6:
-                        System.out.println("Restore factory settings");
-                        break;
+                    }
+                    case 2 -> System.out.println("Phone settings");
+                    case 3 -> System.out.println("Display settings");
+                    case 4 -> System.out.println("Network settings");
+                    case 5 -> System.out.println("Security settings");
+                    case 6 -> System.out.println("Restore factory settings");
                 }
                 break;
             case 7:
@@ -377,7 +301,7 @@ public class NokiaPhone {
                 System.out.println("Profile");
                 System.out.println("""
                         1-> Activating profile and change settings
-                        2-> General 
+                        2-> General
                         3-> Meeting
                         4-> Outdoor
                         5-> Indoor

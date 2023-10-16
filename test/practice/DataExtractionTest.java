@@ -1,5 +1,6 @@
 //package practice;
 //
+//import JonathanTask.DataExtraction;
 //import org.junit.jupiter.api.Test;
 //
 //import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -39,7 +40,7 @@
 //        int startPosition = 2;
 //        int endPosition = 4;
 //
-//        int[] result = dataExtraction.extract(dataset, column, startPosition, endPosition);
+//        int[] result = dataExtraction.jona(dataset, column, startPosition, endPosition);
 //
 //
 //        assertEquals(8, result[0]);

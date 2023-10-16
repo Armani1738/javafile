@@ -1,8 +1,9 @@
 package ChibuzorAssignment;
 
 public class Jamb {
+    public static void main(String[] args) {
 
-
+    }
     public static int numberOfCopies(int copies, int price) {
         int totalCopies = 0;
         if (copies >= 1 && copies <= 4){

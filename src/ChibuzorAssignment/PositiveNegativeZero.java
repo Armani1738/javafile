@@ -16,8 +16,9 @@ public class  PositiveNegativeZero {
             if(number > positive){
                 System.out.println("positive");
             }
-            if(number < Negative){
-                System.out.println("Negative");
+            else if
+                (number < Negative)
+                        System.out.println("Negative");
             }
             if (number == zero){
                 System.out.println("zero");
@@ -25,4 +26,4 @@ public class  PositiveNegativeZero {
 
         }
     }
-}
+
