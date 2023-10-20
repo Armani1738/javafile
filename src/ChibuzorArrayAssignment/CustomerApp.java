@@ -14,7 +14,7 @@ public class CustomerApp {
         int number = Integer.parseInt(customer);
         System.out.println("Enter number of product: ");
         String product = input.nextLine();
-        while (product.matches("\\d+")){
+        while (!product.matches("\\d+")){
             System.out.println("invalid input\nEnter valid number: ");
             product = input.nextLine();
         }
@@ -22,9 +22,9 @@ public class CustomerApp {
         String[][] salesRecord = new String[number][productList];
         int[][] receivingRecord = new int[number][productList];
         for (int count = 0; count < number; count++) {
-            System.out.println("customer" + (count + 1) + "item price is: " + "\n");
+            System.out.println("customer " + (count + 1) + " item price is: " + "\n");
             for (int counts = 0; counts < productList; counts++) {
-                System.out.println("item" + (counts + 1) + ": ");
+                System.out.println("item " + (counts + 1) + ": ");
                 salesRecord[count][counts] = input.nextLine();
                 while (!salesRecord[count][counts].matches("\\d+")){
                     System.out.println("invalid input\nEnter valid number: ");
@@ -34,7 +34,7 @@ public class CustomerApp {
             }
             System.out.printf("%-15s", "");
             for (int columns = 0; columns < productList; columns++) {
-                System.out.printf("%16s", "item" + (columns + 1));
+                System.out.printf("%-16s", "item" + (columns + 1));
             }
             System.out.println();
         }

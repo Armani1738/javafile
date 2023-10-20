@@ -13,12 +13,10 @@ public class Shopping {
         ArrayList<String> quantityList = new ArrayList<>();
         ArrayList<String> unitOfProduct = new ArrayList<>();
 
-
         String convert = "yes";
         String quantity;
-        System.out.println("What is the customer's name: ");
+        System.out.println("What is your name: ");
         String customer = input.nextLine();
-
 
         int counts = 0;
         while (convert.equals("yes")) {
@@ -42,29 +40,26 @@ public class Shopping {
                 System.out.println(option);
             }
         }
-
-
         System.out.println("What is the cashier's name: ");
         String cashier = input.nextLine();
         System.out.println("How much discount will customer get?: ");
         String discount = input.nextLine();
-        int itemPrice;
-
+        int itemPrice = 0;
         long millis = System.currentTimeMillis();
         Date date = new Date(millis);
         System.out.printf("""
-                                SEMICOLON STORES
-                                MAIN BRANCH
-                                LOCATION: 312 HERBERT MACAULAY WAY, SABO, LAGOS
-                                TEL: O7O18119827
-                                DATE: %S
-                                CASHIERS: %S
-                                CUSTOMER NAME: %S
-                                                    
-                                ====================================================
-                                    ITEM       QTY          PRICE          TOTAL(NGN)
-                                ----------------------------------------------------
-                                                                    """, date,cashier, customer);
+                SEMICOLON STORES
+                MAIN BRANCH
+                LOCATION: 312 HERBERT MACAULAY WAY, SABO, LAGOS
+                TEL: O7O18119827
+                DATE: %S
+                CASHIERS: %S
+                CUSTOMER NAME: %S
+
+                ====================================================
+                    ITEM       QTY          PRICE          TOTAL(NGN)
+                ----------------------------------------------------
+                                                    """, date, cashier, customer);
         int itemsTotalPrice = 0;
         for (int count = 0; count < counts; count++) {
             String goods = itemsList.get(count);
@@ -72,40 +67,49 @@ public class Shopping {
             quantity = quantityList.get(count);
             itemPrice = Integer.parseInt(quantity) * Integer.parseInt(pricePerUnit);
             itemsTotalPrice = itemsTotalPrice + itemPrice;
-            System.out.printf("\t%s\t\t\t%s\t\t\t%s\t\t\t%d\n",goods, quantity, pricePerUnit, itemPrice);
+            System.out.printf("\t%s\t\t\t%s\t\t\t%s\t\t\t%d\n", goods, quantity, pricePerUnit, itemPrice);
         }
         double itemDiscount = (double) itemsTotalPrice * Integer.parseInt(discount) / 100;
         double vat = (double) itemsTotalPrice * (17.50 / 100);
-        double billTotal = ((double)itemsTotalPrice + vat) - itemDiscount;
+        double billTotal = ((double) itemsTotalPrice + vat) - itemDiscount;
         System.out.printf("""
-                                
-                                                  sub Total:  %d
-                                                   Discount:  %.2f
-                                                VAT @ 17.50:  %.2f
-                                ============================================
-                                                 Bill Total:  %.2f
-                                ============================================
-                                     THIS IS NOT A RECEIPT KINDLY PAY %.2f
-                     """, itemsTotalPrice, itemDiscount, vat, billTotal, billTotal);
+                                                 SEMICOLON STORES
+                MAIN BRANCH
+                LOCATION: 312 HERBERT MACAULAY WAY, SABO, LAGOS
+                TEL: O7O18119827
+                DATE: %S
+                CASHIERS: %S
+                CUSTOMER NAME: %S
+
+                ====================================================
+                    ITEM       QTY          PRICE          TOTAL(NGN)
+                ----------------------------------------------------
+
+                                             sub Total:  %d
+                                              Discount:  %.2f
+                                           VAT @ 17.50:  %.2f
+                =======================================================
+                                    Bill Total:  %.2f
+                =======================================================
+                                THIS IS NOT A RECEIPT KINDLY PAY %.2f
+                """, itemsTotalPrice, itemDiscount, vat, billTotal, billTotal);
         System.out.println("How much did the customer give to you?: ");
         String amountTender = input.nextLine();
 
-
-       String balance = String.valueOf(Integer.parseInt(amountTender) - billTotal);
+        String balance = String.valueOf(Integer.parseInt(amountTender) - billTotal);
         System.out.printf("""
-                                ===========================================================
-                                SEMICOLON STORES
-                                MAIN BRANCH
-                                LOCATION: 312 HERBERT MACAULAY WAY, SABO, LAGOS
-                                TEL: 07018119827
-                                DATE: %s
-                                CASHIER: %s
-                                Customer Name: %S
-                                ============================================================
-                                ITEM        QTY          PRICE          TOTAL(NGN)
-                                ------------------------------------------------------------
+                               ===========================================================
+                               SEMICOLON STORES                                         
+                               MAIN BRANCH                                               
+                               LOCATION: 312 HERBERT MACAULAY WAY, SABO, LAGOS           
+                               TEL: 07018119827                                          
+                               DATE: %s
+                               CASHIER: %s
+                               Customer Name: %S
+                               ============================================================
+                               ITEM        QTY          PRICE          TOTAL(NGN)
+                               ------------------------------------------------------------
                 """, date, cashier, customer);
-
         for (int index = 0; index < counts; index++) {
             String goods = itemsList.get(index);
             String pricePerUnit = unitOfProduct.get(index);
@@ -116,3 +120,29 @@ public class Shopping {
         }
     }
 }
+//         vat = itemsTotalPrice * (17.50 / 100);
+//         billTotal = ((double)itemsTotalPrice + vat) - itemDiscount;
+//         itemsTotalPrice = itemsTotalPrice + itemPrice;
+//        System.out.printf("""
+//                                ===========================================================
+//                                SEMICOLON STORES
+//                                MAIN BRANCH
+//                                LOCATION: 312 HERBERT MACAULAY WAY, SABO, LAGOS
+//                                TEL: 07018119827
+//                                DATE: %s
+//                                CASHIER: %s
+//                                Customer Name: %S
+//                                ============================================================
+//                                ITEM        QTY          PRICE          TOTAL(NGN)
+//                                ------------------------------------------------------------
+//
+//                                                  sub Total:  %d
+//                                                  Discount:  %.2f
+//                                                  VAT @ 17.50:  %.2f
+//                                ============================================
+//                                                  Bill Total:  %.2f
+//                                ============================================
+//                                           THIS IS NOT A RECEIPT KINDLY PAY %.2f
+//
+//                """, date, cashier, customer, itemsTotalPrice, itemDiscount, vat, billTotal, billTotal);
+//    }
